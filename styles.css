@@ -1,0 +1,264 @@
+:root{
+  --flag-blue: #041664;
+  --flag-red:  #6d000d;
+  --flag-white: #ffffff;
+  --radius: 14px;
+}
+*{box-sizing:border-box}
+.index-body{
+  margin:0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: url('background100.png') ;
+  background-size: cover;          /* fills the entire screen */
+  background-position: center;     /* keeps the main part centered */
+  background-repeat: no-repeat;    /* prevents repeating */
+  background-attachment: fixed;    /* keeps it fixed on scroll for PC */
+  height: 100vh; 
+  color:#ffffff;
+}
+.container{width: calc(100% - 40px); max-width: 1000px; margin: 0 auto;}
+.site-header{
+  background: linear-gradient(90deg, var(--flag-blue), var(--flag-red));
+  color: var(--flag-white);
+  padding: 18px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.site-header h1{font-size:20px;margin:0;font-weight:700;text-align:center;}
+.top-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+}
+.top-nav a{
+  color: rgb(255, 255, 255);
+  text-decoration:none;
+  font-weight:600;
+  transition: all 0.3s ease;
+}
+.top-nav a:hover{
+  color:#ffffff;
+  text-shadow:0 0 8px rgb(255, 255, 255);
+}
+.main-content{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  padding:30px 0;
+}
+.card{
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.card p{
+  line-height:1.6;
+  font-size:16px;
+  color:#fff;
+  margin:0;
+}
+@media (max-width: 768px){
+  .header-inner{flex-direction:column;text-align:center;}
+  .site-header h1{font-size:18px;}
+  .card p{font-size:14px;}
+}
+
+body{
+  
+  font-family: 'Inter', system-ui, sans-serif;
+  color:#ffffff;
+}
+
+.report-item {
+  text-align: center;
+}
+
+.report-item img {
+  display: block;
+  margin: 0 auto;
+}
+
+.report-item p {
+  text-align: center;
+  margin-top: 15px;
+  width: 85%; /* optional, to match image width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+.top-nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.301);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.151);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  background: linear-gradient(90deg, #001264, #6d000d);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 0 10px white;
+}
+
+.success-message {
+  display: none;
+  text-align: center;
+  color: lightgreen;
+  margin-top: 15px;
+}
+
+/* Reset & base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+.login-body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: url('orelsekrie.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Full page wrapper to center content */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+/* Keep the login area full-width on mobile but constrained on larger screens */
+.login-wrap {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Login box: transparent background (as requested) */
+.login-box {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  /* NO background color - fully transparent so flag shows through */
+  backdrop-filter: (4px); /* gentle blur for legibility while keeping transparency */
+  -webkit-backdrop-filter: (4px);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+
+/* Title layout similar to the provided image */
+.login-box h1 {
+  font-size: 20px;
+  line-height: 1.05;
+  letter-spacing: 0.6px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Inputs styled to look like floating pale boxes while login box itself remains transparent */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255,255,255,0.95); /* pale input like in sample */
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Button matches dark navy from sample */
+#loginBtn {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 8px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  background: #10273a;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(16,39,58,0.35);
+}
+
+#loginBtn:active { transform: translateY(1px); }
+
+.forgot {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+.error {
+  color: #ffdddd;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Desktop tweaks */
+@media (min-width: 900px) {
+  .login-wrap { max-width: 420px; }
+  .login-box { padding: 28px; }
+  .login-box h1 { font-size: 22px; }
+}
+
+/* Ensure good contrast on very small screens */
+@media (max-width: 360px) {
+  .login-box h1 { font-size: 18px; }
+  .login-box input { padding: 10px; font-size: 14px; }
+  #loginBtn { padding: 11px; font-size: 14px; }
+}
+
+

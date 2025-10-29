@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact Us - Official Anti-Fraud Prevention Department</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body class="index-body">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Official Anti-Fraud Prevention Department</h1>
+      <nav class="top-nav">
+        <a href="home.html">Home</a>
+        <a href="reports.html">Reports</a>
+        <a href="contacts.html">Contact Us</a>
+        <a href="cashout.html">Cash-out</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" rows="5" placeholder="Please write your message below. Make sure to include your contact information, such as your email address and your Telegram username, along with the details of your message that you want us to receive." required></textarea>
+    <button onclick="sendMessage()">Send</button>
+    <div class="success-message" id="success">Your message has been sent successfully!</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

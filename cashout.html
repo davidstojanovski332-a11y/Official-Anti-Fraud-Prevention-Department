@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>USDT Payment — Official Anti-Fraud Prevention Department</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png">
+  <style>
+    body {
+      background-color: #001327;
+      color: white;
+      font-family: 'Inter', system-ui, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .payment-card {
+      background: white;
+      color: #111827;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      padding: 30px 25px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .qr { margin-top: 10px; }
+    .wallet-box {
+      background: #f3f4f6;
+      padding: 12px;
+      border-radius: 10px;
+      word-break: break-all;
+      font-family: monospace;
+      font-size: 14px;
+      color: #111827;
+      margin-top: 14px;
+    }
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .btn-row button {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-copy {
+      background: #2b78ff;
+      color: white;
+    }
+    .btn-copy:hover { background: #1e63e9; }
+    .btn-trust {
+      background: #e5e7eb;
+      color: #111827;
+    }
+    .btn-trust:hover { background: #d1d5db; }
+    .note {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      color: #9ca3af;
+      font-size: 13px;
+      padding: 10px;
+      background: rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Same header from index.html -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Official Anti-Fraud Prevention Department</h1>
+      <nav class="top-nav">
+        <a href="home.html">Home</a>
+        <a href="reports.html">Reports</a>
+        <a href="contacts.html">Contact Us</a>
+        <a href="cashout.html">Cash-out</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="payment-card">
+      <h2>Pay with USDT</h2>
+      <p>Send USDT to the Trust Wallet address below. Once payment is received, your cashback will be confirmed.</p>
+
+      <div class="qr">
+        <img src="qr code.jpg" 
+             alt="USDT QR Code" width="180" height="180" style="border-radius:12px;">
+      </div>
+
+      <div class="wallet-box" id="walletAddress">
+        0xEA601F507f383D89F920408D604517D700BC7eeF
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-copy" id="copyBtn">Copy Address</button>
+        <button class="btn-trust" id="trustBtn">Open in Trust Wallet</button>
+      </div>
+
+      <div class="note">
+        Please send <b>USDT</b> to the address above.
+        <br>Make sure you are using the correct network to avoid loss of funds.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Official Anti-Fraud Prevention Department. All rights reserved.
+  </footer>
+
+  <script>
+    const copyBtn = document.getElementById('copyBtn');
+    const trustBtn = document.getElementById('trustBtn');
+    const walletAddress = document.getElementById('walletAddress').textContent.trim();
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(walletAddress).then(() => {
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => copyBtn.textContent = 'Copy Address', 1500);
+      }).catch(() => {
+        prompt('Copy this address:', walletAddress);
+      });
+    });
+
+    trustBtn.addEventListener('click', () => {
+      window.open(`https://link.trustwallet.com/send?asset=c60_tether&address=${walletAddress}`, '_blank');
+    });
+  </script>
+
+</body>
+</html>

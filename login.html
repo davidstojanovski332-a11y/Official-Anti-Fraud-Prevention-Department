@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Official Anti-Fraud Prevention Department - Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body class="login-body">
+  <main class="page">
+    <section class="login-wrap">
+      <div class="login-box" role="form" aria-labelledby="login-title">
+        <h1 id="login-title">OFFICIAL ANTI-FRAUD<br>PREVENTION<br>DEPARTMENT</h1>
+        <form id="loginForm" autocomplete="off">
+          <input id="username" name="username" type="text" placeholder="Username" required>
+          <input id="password" name="password" type="password" placeholder="Password" required>
+          <button type="submit" id="loginBtn">LOGIN</button>
+          <a class="forgot" href="#">Forgot password?</a>
+          <p id="error" class="error" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form"); // your login form
+    const passwordInput = document.querySelector('input[type="password"]');
+    const errorMsg = document.createElement("p");
+    errorMsg.style.color = "red";
+    errorMsg.style.marginTop = "10px";
+    form.appendChild(errorMsg);
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const password = passwordInput.value.trim();
+
+      if (password === "j8PFBb1vm4D4") {
+        // ✅ Correct password → redirect
+        window.location.href = "home.html";
+      } else {
+        // ❌ Wrong password → show error
+        errorMsg.textContent = "Invalid password. Please try again.";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

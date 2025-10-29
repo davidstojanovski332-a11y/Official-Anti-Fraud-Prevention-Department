@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reports - Official Anti-Fraud Prevention Department</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png">
+  <style>
+    body {
+      background-color: #001327;
+      color: rgb(255, 255, 255);
+      font-family: 'Inter', sans-serif;
+    }
+    .reports-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+    .report-item {
+      text-align: center;
+      max-width: 900px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1.5s ease forwards;
+    }
+    .report-item:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .report-item:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .report-item img {
+      width: 85%;
+      max-width: 900px;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+      height: auto;
+    }
+    @media (min-width: 1024px) {
+      .report-item img {
+        height: 65%;
+        max-height: 380px;
+      }
+    }
+    .report-item p {
+      color: white;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-top: 15px;
+      white-space: pre-line;
+    }
+    @media (max-width: 768px){
+      .report-item img{width: 95%; height: auto;}
+      .report-item p{font-size: 14px;}
+      .header-inner{flex-direction: column; text-align: center;}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>Official Anti-Fraud Prevention Department</h1>
+      <nav class="top-nav">
+        <a href="home.html">Home</a>
+        <a href="reports.html">Reports</a>
+        <a href="contacts.html">Contact Us</a>
+        <a href="cashout.html">Cash-out</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="reports-gallery">
+    <div class="report-item">
+      <img src="trumpsocavka.png" alt="Fraud Report Image 1">
+      <p><b>Anti-Fraud Success! </b>
+
+Our Anti-Fraud Prevention Department has caught the scammers who defrauded <b>Ms. Lena Carver of $22,500 in TRB products.</b> 
+While the fraudsters are still awaiting sentencing, all stolen and invested funds have been fully recovered. <b> Ms. Lena Carver’s account now proudly holds $42 million</b>, secure and protected thanks to our team’s expertise.</p><br><br><br>
+    </div>
+
+    <div class="report-item">
+      <img src="trumpsomaaz1.png" alt="Fraud Report Image 2">
+      <p><b>Justice Has Been Served!</b>
+
+With the support of the Anti-Fraud Prevention Department, we caught the fraudsters who deceived <b>Mr. Nolan Walker, scamming him for $58,000 in a QFS cashout</b>.
+
+<b>All stolen funds and Mr. Walker’s full investments have been fully recovered and returned</b>. Thanks to our team’s decisive actions, and with <b>President Donald Trump</b> reviewing the case for transparency, <b>Mr. Walker now proudly holds $42 million</b>, fully secure and protected.</p><br><br><br>
+    </div>
+
+    <div class="report-item">
+      <img src="trumpsomaz22.png" alt="Fraud Report Image 3">
+      <p>I was a victim of a scam involving <b>TRB products</b>, which resulted in a loss of <b>$9,000</b>. Thanks to the excellent work of the <b>Anti-Fraud Prevention Department</b>, the scammer was caught, and the funds, <b>along with my investments, have been fully recovered.</b>
+        
+I sincerely thank the <b>Anti-Fraud Prevention team and President Trump for their support.</b> Today, my account reflects a balance of <b>Anti-Fraud Prevention team and President Trump for their support.</b>
+<b>This experience has strengthened my faith</b> in the vigilance and professionalism of those who <b>protect investors and consumers.</b></p>
+    </div>
+
+
+  </div>
+</body>
+</html>
